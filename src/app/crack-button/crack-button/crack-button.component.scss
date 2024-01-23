@@ -1,0 +1,58 @@
+$animation-time: 250ms;
+$height-button: 2em;
+$wight-button: 30em;
+
+.crack-button {
+  transition: height $animation-time;
+  display: inline-block;
+  width: $wight-button;
+  height: 0;
+
+  &.open {
+    height: $wight-button;
+    transition-delay: $animation-time;
+
+    &::before, &::after {
+      transition-delay: 0s, $animation-time;
+      color: transparent;
+      height: 1em;
+    }
+  }
+
+  &::before, &::after {
+    transition-property: color, height;
+    transition-duration: $animation-time;
+    transition-delay: $animation-time, 0s;
+    cursor: pointer;
+    content: "";
+    display: block;
+    width: 100%;
+    height: $height-button;
+    background-color: dodgerblue;
+    text-align: center;
+    color: white;
+    line-height: calc(2 * $height-button);
+  }
+
+  &::before {
+    content: attr(title);
+    border-radius: 10px 10px 0 0;
+  }
+
+  &::after {
+    border-radius: 0 0 10px 10px;
+  }
+
+  > .content {
+    overflow: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.crack-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

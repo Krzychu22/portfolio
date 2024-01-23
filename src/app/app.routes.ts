@@ -12,5 +12,9 @@ export const routes: Routes = [
   {
     path: 'todo',
     loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule)
+  },
+  {
+    path: "button",
+    loadChildren: () => import('./crack-button/crack-button.module').then(m => m.CrackButtonModule)
   }
 ];
