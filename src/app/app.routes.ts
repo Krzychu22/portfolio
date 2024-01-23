@@ -16,5 +16,9 @@ export const routes: Routes = [
   {
     path: "button",
     loadChildren: () => import('./crack-button/crack-button.module').then(m => m.CrackButtonModule)
+  },
+  {
+    path: "redux",
+    loadChildren: () => import('./sample-redux/sample-redux.module').then(m => m.SampleReduxModule)
   }
 ];
