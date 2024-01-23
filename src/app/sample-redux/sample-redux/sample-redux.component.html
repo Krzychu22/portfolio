@@ -7,10 +7,14 @@
     <mat-label>Liczba</mat-label>
     <input matInput #val maxlength="5" placeholder="Np. 10">
   </mat-form-field>
-  <button mat-button (click)="set(val.value); val.value = ''">Ustaw</button>
+  <button
+    mat-button
+    style="background:greenyellow"
+    (click)="set(val.value); val.value = ''"
+  >Ustaw</button>
 </div>
 <div>
-  <button mat-button (click)="increase()">Dodaj</button>
-  <button mat-button (click)="decrease()">Odejmij</button>
-  <button mat-button (click)="reset()">Reset</button>
+  <button mat-button style="background:#fa8c16" (click)="increase()">Dodaj</button>
+  <button mat-button style="background:#fa8c16" (click)="decrease()">Odejmij</button>
+  <button mat-button style="background:red" (click)="reset()">Reset</button>
 </div>
