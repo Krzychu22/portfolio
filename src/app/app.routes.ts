@@ -20,5 +20,9 @@ export const routes: Routes = [
   {
     path: "redux",
     loadChildren: () => import('./sample-redux/sample-redux.module').then(m => m.SampleReduxModule)
+  },
+  {
+    path: 'weather',
+    loadChildren: () => import('./weather/weather.module').then(m => m.WeatherModule)
   }
 ];

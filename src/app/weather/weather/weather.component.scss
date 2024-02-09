@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    margin: 10px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

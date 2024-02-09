@@ -1,0 +1,21 @@
+<div>
+  <mat-form-field [formGroup]="weatherSearchForm"
+                  appearance="outline">
+    <mat-label>Miasto:</mat-label>
+    <input matInput formControlName='location' type="text" placeholder="Wpisz miasto"
+    (keydown)="filterEnter($event.key)"/>
+  </mat-form-field>
+  <button mat-button (click)="sendToAPIXU()">Szukaj</button>
+  <div class="info">
+    <h2>{{ weatherData?.name }}</h2>
+    <p>Temperatura: {{ weatherData?.main?.temp }}°C</p>
+    <p *ngIf="weatherData?.snow; else rain">Opady Sniegu: {{ weatherData?.snow['1h'] }}mm</p>
+    <ng-template #rain>
+      <p *ngIf="weatherData?.rain; else noRain">Opady deszczu: {{ weatherData?.rain['1h'] }}mm</p>
+    </ng-template>
+    <ng-template #noRain>
+      <p>Brak opadów</p>
+    </ng-template>
+    <p>Wiatr: {{ weatherData?.wind.speed }}km/h</p>
+  </div>
+</div>

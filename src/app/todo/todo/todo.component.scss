@@ -2,17 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.title {
-  margin: 15px;
-}
+  .title {
+    margin: 15px;
+  }
 
-.list {
-  display: grid;
-  background-color: cornflowerblue;
-}
+  .list {
+    display: grid;
+    background-color: cornflowerblue;
+  }
 
-.isDone{
-  text-decoration: line-through;
+  .isDone{
+    text-decoration: line-through;
+  }
+  mat-form-field {
+  }
 }

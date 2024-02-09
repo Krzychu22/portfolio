@@ -1,7 +1,7 @@
 <table class="list">
   <button mat-raised-button (click)="addTask()" [disabled]="model.invalid">DODAJ</button>
   <div class="title">
-    <mat-form-field appearance="fill" [formGroup]="model">
+    <mat-form-field [formGroup]="model">
       <mat-label>Pisz tu:</mat-label>
       <input matInput formControlName="title">
     </mat-form-field>
